@@ -23,7 +23,7 @@ Aqui Para executar esse projeto faça o `git clone git@github.com:jadsoncerqueir
 
 Na raiz do projeto execute o comando `npm install`.
 
-OBS (Antes de executar o app vá até o repositorio `https://github.com/jadsoncerqueira/minha-api` e siga as instruções para rodar a api localmente para que o app funcione corretamente.
+OBS (Antes de executar o app vá até o repositorio `https://github.com/jadsoncerqueira/minha-api` e siga as instruções para rodar a api localmente para que o app funcione corretamente.  desse projeto do react native no arquivo `apps/meu-app/src/utils/index.ts` na linha 4 está a configuração do seu localhost com a porta que a vai está rodando ele.
 
 Ainda na raiz do projeto execute o comando `npm run app:start`.
 
