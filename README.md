@@ -7,7 +7,7 @@ A princípio foi um desafio para mim configurar o react-native-web, mas com o pa
 
 - [Sobre o app](#sobre-o-app)
 - [Instruções de execução](#instruções-de-execução)
-- 
+  
 ## Sobre o app
 
 O App tem duas telas onde consome um api GraphQl também criada por mim.
