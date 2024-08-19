@@ -23,10 +23,10 @@ Aqui Para executar esse projeto faça o `git clone git@github.com:jadsoncerqueir
 
 Na raiz do projeto execute o comando `npm install`.
 
-OBS (Antes de executar o app vá até o repositorio [] e siga as instruções para rodar a api localmente.
+OBS (Antes de executar o app vá até o repositorio `https://github.com/jadsoncerqueira/minha-api` e siga as instruções para rodar a api localmente para que o app funcione corretamente.
 
 Ainda na raiz do projeto execute o comando `npm run app:start`.
 
-Se voce quiser que rode a aplicação no seu smartphone, baixe na sua loja de aplicativo o app da expo, abra o aplicativo e com ele aberto leia o qr code que vai aparecer no terminal do seu computar para que voce tenha o preview no seu smartphone.
+Se voce quiser que rode a aplicação no seu smartphone, baixe na sua loja de aplicativo o app da expo, abra o aplicativo e com ele aberto leia o qr code que vai aparecer no terminal do seu computar para que você tenha o preview no seu smartphone.
 
 se você quiser ver o app rodando no seu mavegador, ainda no terminal com o projeto em execução aperte a tecla 'w' e uma nova janela será aberta no seu navegador.
