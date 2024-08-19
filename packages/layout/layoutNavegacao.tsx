@@ -11,8 +11,8 @@ import {
 
 const LayoutNavegacao = () => (
   <Tabs screenOptions={{tabBarStyle: {position: Platform.OS === "web" ? "absolute" : "relative", top: 0}, headerShown: false}}>
-    <Tabs.Screen name='index' options={{title: "Postagens"}}/>
-    <Tabs.Screen name='membros' options={{title: "Membros"}}/>
+    <Tabs.Screen name='index' options={{title: "Membros"}}/>
+    <Tabs.Screen name='postagens' options={{title: "Postagens"}}/>
   </Tabs>
 );
 

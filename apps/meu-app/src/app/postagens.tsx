@@ -1,38 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, FlatList} from 'react-native';
+import { StyleSheet, Text, View, FlatList, ActivityIndicator} from 'react-native';
 import { CardPostagem } from "@front-end/ui";
-
-const POSTAGENS = [
-  {
-    "id": 1,
-    "titulo": "Primeira Postagem",
-    "conteudo": "Este é o conteúdo da primeira postagem.",
-    "autor": "João Silva",
-    "data": "2024-08-18T12:00:00Z"
-  },
-  {
-    "id": 2,
-    "titulo": "Segunda Postagem",
-    "conteudo": "Este é o conteúdo da segunda postagem.",
-    "autor": "Maria Oliveira",
-    "data": "2024-08-17T15:30:00Z"
-  },
-  {
-    "id": 3,
-    "titulo": "Terceira Postagem",
-    "conteudo": "Este é o conteúdo da terceira postagem.",
-    "autor": "Carlos Souza",
-    "data": "2024-08-16T09:45:00Z"
-  }
-]
+import { useQuery } from '@apollo/client';
+import { GET_DATA_POSTAGENS } from '../utils/queries';
 
 export default function Postagens() {
+  const { loading, error, data } = useQuery(GET_DATA_POSTAGENS);
+
+  if (loading) return <ActivityIndicator size="large" color="#0000ff" />;
+  if (error) return <Text>Error: {error.message}</Text>;
   return (
     <View style={styles.container}>
         <FlatList
-          data={POSTAGENS}
+          data={data.getPostagem}
           renderItem={({item}) => <CardPostagem {...item} />}
-          keyExtractor={(item) => item.id.toString()}
+          keyExtractor={(item) => `${item.id}`}
         />
     </View>
   );

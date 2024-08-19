@@ -1,4 +1,6 @@
 import React from 'react';
+import { ApolloProvider } from '@apollo/client';
+import client from '../utils';
 import { Stack } from 'expo-router';
 import {
   View
@@ -7,7 +9,9 @@ import { LayoutNavegacao } from '@front-end/layout';
 
 
 const Layout = () => (
-    <LayoutNavegacao />
+  <ApolloProvider client={client}>
+      <LayoutNavegacao />
+    </ApolloProvider>
 );
 
 

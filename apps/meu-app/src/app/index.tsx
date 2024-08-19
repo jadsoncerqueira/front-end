@@ -1,36 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, ActivityIndicator } from 'react-native';
 import { CardMembros } from '@front-end/ui';
-
-const MEMBROS = [
-  {
-    "id": 1,
-    "nome": "João Silva",
-    "email": "joao.silva@example.com",
-    "dataDeEntrada": "2023-01-10"
-  },
-  {
-    "id": 2,
-    "nome": "Maria Oliveira",
-    "email": "maria.oliveira@example.com",
-    "dataDeEntrada": "2023-02-15"
-  },
-  {
-    "id": 3,
-    "nome": "Carlos Souza",
-    "email": "carlos.souza@example.com",
-    "dataDeEntrada": "2023-03-20"
-  }
-]
-
+import { useQuery } from '@apollo/client';
+import { GET_DATA_MEMBROS } from '../utils/queries';
 
 export default function Membros() {
+  const { loading, error, data } = useQuery(GET_DATA_MEMBROS);
+
+  if (loading) return <ActivityIndicator size="large" color="#0000ff" />;
+  if (error) return <Text>Error: {error.message}</Text>;
   return (
     <View style={styles.container}>
       <FlatList
-        data={MEMBROS}
+        data={data.getMembros}
         renderItem={({item}) => <CardMembros {...item}/>}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => `${item.id}`}
       />
       <StatusBar style="auto" />
     </View>
