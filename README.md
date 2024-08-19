@@ -19,7 +19,7 @@ O App tem duas telas onde consome um api GraphQl também criada por mim.
 
 ## Instruções de execução
 
-Aqui Para executar esse projeto faça o git clone.
+Aqui Para executar esse projeto faça o `git clone git@github.com:jadsoncerqueira/front-end.git`.
 
 Na raiz do projeto execute o comando `npm install`.
 
